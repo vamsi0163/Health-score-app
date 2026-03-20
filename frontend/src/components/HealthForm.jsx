@@ -21,15 +21,18 @@ export default function HealthForm({ onSubmit, loading }) {
   const [errors, setErrors] = useState({});
 
   const validate = () => {
-    const errs = {};
-    fields.forEach(({ key, min, max, label }) => {
-      const val = parseFloat(values[key]);
-      if (values[key] === '') errs[key] = `${label} is required`;
-      else if (isNaN(val) || val < min || val > max)
-        errs[key] = `${label} must be between ${min} and ${max}`;
-    });
-    return errs;
-  };
+  const errs = {};
+  fields.forEach(({ key, min, max, label }) => {
+    const raw = values[key];
+    const val = parseFloat(raw);
+    if (raw === '' || raw === undefined) {
+      errs[key] = `${label} is required`;
+    } else if (isNaN(val) || val < min || val > max) {
+      errs[key] = `${label} must be between ${min} and ${max}`;
+    }
+  });
+  return errs;
+};
 
   const handleChange = (key, val) => {
     setValues((v) => ({ ...v, [key]: val }));
