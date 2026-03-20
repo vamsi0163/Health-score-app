@@ -11,12 +11,14 @@ const app = express();
 app.use(cors({
   origin: [
     'http://localhost:3000',
-    'https://health-score-app-m7rc.vercel.app/',
+    'https://health-score-app-alpha.vercel.app',
+    'https://health-score-app-m7rc.vercel.app',
   ],
   methods: ['GET', 'POST', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type'],
   credentials: true,
 }));
+// app.options('*', cors());
 app.options('*', cors());
 app.use(express.json());
 
