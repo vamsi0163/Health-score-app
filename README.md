@@ -1,4 +1,4 @@
-# ❤️ HealthScore — Health Score & Recommendation System
+# HealthScore — Health Score & Recommendation System
 
 A full-stack web application that processes wearable device health data, computes a 0–100 health score, and returns personalized recommendations.
 
@@ -8,7 +8,7 @@ A full-stack web application that processes wearable device health data, compute
 
 | Layer     | Technology                          |
 |-----------|-------------------------------------|
-| Frontend  | React 18, Chart.js, Axios           |
+| Frontend  | React ,Axios         |
 | Backend   | Node.js, Express.js                 |
 | Database  | MongoDB + Mongoose (optional)       |
 | Validation| express-validator                   |
@@ -64,26 +64,14 @@ health-app/
 ### 1. Clone & install
 
 ```bash
-git clone <your-repo-url>
+git clone <https://github.com/vamsi0163/Health-score-app>
 cd health-app
 npm run install:all
 ```
 
-### 2. Configure environment
 
-```bash
-cd backend
-cp .env.example .env
-```
 
-Edit `.env`:
-```
-PORT=5000
-MONGO_URI=mongodb://localhost:27017/healthscore   # remove line to skip DB
-NODE_ENV=development
-```
-
-### 3. Run in development mode
+### 2. Run in development mode
 
 From the project root:
 ```bash
@@ -244,7 +232,7 @@ Each of the 5 metrics contributes **0–20 points** (total: 0–100).
 
 ## 🌐 Deployment
 
-### Backend — Railway / Render / Fly.io
+### Backend — Render
 
 ```bash
 cd backend
@@ -253,7 +241,7 @@ cd backend
 npm start
 ```
 
-### Frontend — Vercel / Netlify
+### Frontend — Vercel 
 
 ```bash
 cd frontend
@@ -262,29 +250,4 @@ npm run build
 # Deploy the /build folder
 ```
 
-### Docker (optional)
 
-A `docker-compose.yml` can be added to run MongoDB + backend + frontend in containers. Create an issue or PR to add this.
-
----
-
-## 🔒 Adding Authentication (Bonus)
-
-To add basic JWT auth:
-
-1. `npm install jsonwebtoken bcryptjs` in backend
-2. Create `models/User.js`, `routes/authRoutes.js`, `middleware/auth.js`
-3. Protect `/api/records` with the auth middleware
-4. Add login/signup forms to the frontend
-
----
-
-## ⚠️ Disclaimer
-
-This system uses simplified, rule-based thresholds for demonstration purposes. It is **not medically accurate** and should not be used as a substitute for professional medical advice.
-
----
-
-## 📄 License
-
-MIT
