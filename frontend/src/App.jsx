@@ -84,7 +84,7 @@ export default function App() {
       </main>
 
       <footer className="app-footer">
-        <p>For demonstration only — not a substitute for medical advice.</p>
+        <p>vamsiteja191017787@gmail.com</p>
       </footer>
     </div>
   );
