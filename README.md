@@ -11,7 +11,7 @@ A full-stack web application that processes wearable device health data, compute
 | Frontend  | React ,Axios         |
 | Backend   | Node.js, Express.js                 |
 | Database  | MongoDB + Mongoose     |
-| Validation| express-validator                   |
+<!-- ---| Validation| express-validator                   |-->
 
 <!-- ---
 
