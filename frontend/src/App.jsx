@@ -32,10 +32,10 @@ export default function App() {
       <header className="app-header">
         <div className="header-inner">
           <div className="logo">
-            <span className="logo-icon">❤️</span>
+            <span className="logo-icon">💚</span>
             <span className="logo-text">HealthScore</span>
           </div>
-          <p className="tagline">Wearable data → personalized insights</p>
+          <p className="tagline">User Json data → personalized insights</p>
         </div>
       </header>
 
